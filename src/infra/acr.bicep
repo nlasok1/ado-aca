@@ -77,7 +77,7 @@ resource acrTask 'Microsoft.ContainerRegistry/registries/tasks@2019-06-01-previe
       cpu: 2
     }
     platform: {
-      os: 'linux'
+      os: 'Linux'
       architecture: 'amd64'
     }
     step: {
