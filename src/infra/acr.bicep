@@ -67,7 +67,7 @@ resource acrDiagnosticSettings 'Microsoft.Insights/diagnosticSettings@2021-05-01
   }
 }
 
-resource acrTask 'Microsoft.ContainerRegistry/registries/tasks@2019-06-01-preview' = {
+resource acrTask 'Microsoft.ContainerRegistry/registries/tasks@2019-04-01' = {
   name: 'adoagent-build-task'
   parent: acr
   location: location
