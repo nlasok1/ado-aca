@@ -39,7 +39,7 @@ resource laWorkspace 'Microsoft.OperationalInsights/workspaces@2020-10-01' = {
   }
 }
 
-resource acr 'Microsoft.ContainerRegistry/registries@2021-06-01-preview' = {
+resource acr 'Microsoft.ContainerRegistry/registries@2021-09-01' = {
   name: acrName
   location: location
   sku: {
@@ -96,7 +96,7 @@ resource acrTask 'Microsoft.ContainerRegistry/registries/tasks@2019-04-01' = {
           name: 'adoagent-build-task-timer'
           schedule: cronSchedule
         }
-      ] : []
+      ] : null
       baseImageTrigger: isTriggeredByBaseImage ? {
         name: 'adoagent-build-task-base-image-trigger'
         baseImageTriggerType: 'All'
@@ -119,7 +119,7 @@ resource acrTask 'Microsoft.ContainerRegistry/registries/tasks@2019-04-01' = {
             } : null
           }
         }
-      ] : []
+      ] : null
     }
   }
 }
